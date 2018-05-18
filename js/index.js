@@ -17,6 +17,7 @@ function IncrementAnimation(elements)
             var count = elements.length;
             var element = elements[i];
             var targetVal = element.textContent;
+            
             for(var j = 0;j < elements.length;j++)
             {
                 elements[j].textContent = "0";
@@ -40,6 +41,9 @@ function IncrementAnimation(elements)
                 }
                 else //switch to next element
                 {
+                    if(targetVal == 0)
+                        element.textContent = "0";                        
+
                     element = elements[i];
                     targetVal = elementMap.get(i);
                     element.textContent = "0";
