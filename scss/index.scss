@@ -13,3 +13,14 @@
     font-size: 32px;
     margin-left: 10px;
 }
+
+#data > div
+{
+    margin-top: -30px;
+
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 35px;
+}
