@@ -54,7 +54,7 @@
             </section>
             <section>
                 <section>Dane</section>
-                <section id="data" data-background-transition="zoom" data-background="rgb(77,126,101)">
+                <section data-state="data" id="data" data-background-transition="zoom" data-background="rgb(77,126,101)">
                     <div>
                         <div>
                             <p>
@@ -91,7 +91,7 @@
                                 Szkół
                             </p>
                         </div>
-                        <div>
+                        <div id="data-numbers">
                             <p>
                                 <span>21</span>
                             </p>
@@ -128,8 +128,8 @@
                         </div>
                     </div>
                 </section>
-                <section>
-                    Razem to aż <span>2137</span> rekordów danych.
+                <section id="data-total" data-state="data-total">
+                    
                 </section>
             </section>
             <section>
@@ -140,10 +140,19 @@
             </section>
         </div>
     </div>
+    <script src="js/index.js"></script>
     <script src="js/zoom.js"></script>
     <script src="js/reveal.js"></script>
     <script>
         Reveal.initialize();
+        Reveal.addEventListener("data",function()
+        {
+            IncrementAnimation(textNodes);
+        });
+        Reveal.addEventListener("data-total",function()
+        {
+            document.getElementById("data-total").textContent = "Razem to aż " + TotalRecords + " rekordów danych."
+        });
     </script>
 </body>
 </html>
