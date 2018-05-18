@@ -45,7 +45,7 @@ function IncrementAnimation(elements)
                     element.textContent = "0";
                 }
             }
-        },30,element,targetVal);
+        },10,element,targetVal);
     }
 }
 
