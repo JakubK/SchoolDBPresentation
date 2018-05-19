@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -13,7 +13,7 @@
     <div class="reveal">
         <div class="slides">
             <section>
-                <h6 style="font-size: 32px;">Baza danych dla projektu szkolnego dziennika elektroniczego</h4>
+                <h4 style="font-size: 32px;">Baza danych dla projektu szkolnego dziennika elektroniczego</h4>
                 <p><i class="sql_keyword">SELECT</i> * <i class="sql_keyword">FROM</i> <span class="sql_target">Autorzy</span>;</p>
                 <table>
                     <thead>
@@ -56,74 +56,30 @@
                 <section data-state="data" id="data" data-background-transition="zoom" data-background="rgb(77,126,101)">
                     <div>
                         <div>
-                            <p>
-                                Nieobecności
-                            </p>
-                            <p>
-                                Klas
-                            </p>
-                            <p>
-                                Kolumn ocen
-                            </p>
-                            <p>
-                                Zatrudnień
-                            </p>
-                            <p>
-                                Lekcji
-                            </p>
-                            <p>
-                                Ocen
-                            </p>
-                            <p>
-                                Szkół
-                            </p>
-                            <p>
-                                Uczniów
-                            </p>
-                            <p>
-                                Szkół
-                            </p>
-                            <p>
-                                Tematów
-                            </p>
-                            <p>
-                                Nauczycieli
-                            </p>
+                            <p>Nieobecności</p>
+                            <p>Klas</p>
+                            <p>Kolumn ocen</p>
+                            <p>Zatrudnień</p>
+                            <p>Lekcji</p>
+                            <p>Ocen</p>
+                            <p>Uwag</p>
+                            <p>Szkół</p>
+                            <p>Uczniów</p>
+                            <p>Przedmiotów</p>
+                            <p>Nauczycieli</p>
                         </div>
                         <div id="data-numbers">
-                            <p>
-                                <span>0</span>
-                            </p>
-                            <p>
-                                <span>120</span> 
-                            </p>
-                            <p>
-                                <span>0</span>
-                            </p>
-                            <p>
-                                <span>194</span>
-                            </p>
-                            <p>
-                                <span>0</span> 
-                            </p>
-                            <p>
-                                <span>0</span>
-                            </p>
-                            <p>
-                                <span>0</span> 
-                            </p>
-                            <p>
-                                <span>2708</span>
-                            </p>
-                            <p>
-                                <span>13</span>
-                            </p>
-                            <p>
-                                <span>193</span> 
-                            </p>
-                            <p>
-                                <span>194</span> 
-                            </p>
+                            <p><span>0</span></p>
+                            <p><span>120</span></p>
+                            <p><span>0</span></p>
+                            <p><span>194</span></p>
+                            <p><span>0</span></p>
+                            <p><span>0</span></p>
+                            <p><span>0</span></p>
+                            <p><span>13</span></p>
+                            <p><span>2708</span></p>
+                            <p><span>193</span></p>
+                            <p><span>194</span></p>
                         </div>
                     </div>
                 </section>
@@ -147,6 +103,7 @@
     <script src="js/reveal.js"></script>
     <script>
         Reveal.initialize();
+
         Reveal.addEventListener("data",function()
         {
             IncrementAnimation(textNodes);

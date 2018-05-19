@@ -9,8 +9,10 @@ for(var j = 0;j < textNodes.length;j++)
 
 var completedRowCalulations = false;
 var i;
+var textElements;
 function IncrementAnimation(elements)
-{       
+{
+        textElements = elements;
         if(!completedRowCalulations)
         {
             i = 0;
@@ -31,28 +33,23 @@ function IncrementAnimation(elements)
             if(completedRowCalulations && i == count)
                 clearInterval(interval);
 
-            element.textContent = parseInt(element.textContent) + 1;
+            element.textContent = parseInt(element.textContent) + 2;
             if(parseInt(element.textContent) >= targetVal)
             {
+                element.textContent = targetVal;
+
                 i++;
                 if(i >= count)
                 {
                     clearInterval(interval);
                 }
                 else //switch to next element
-                {
-                    if(targetVal == 0)
-                        element.textContent = "0";                        
-
+                {                     
                     element = elements[i];
                     targetVal = elementMap.get(i);
                     element.textContent = "0";
                 }
             }
-        },10,element,targetVal);
+        }, 1, element, targetVal);
     }
 }
-
-
-
-
